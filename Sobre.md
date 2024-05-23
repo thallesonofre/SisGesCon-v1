@@ -12,13 +12,9 @@ O SisGesCon-v1 é um sistema de gestão de consultórios desenvolvido para otimi
 > Principais Funcionalidades
 
 1. Agenda e Agendamento de Consultas
-
   - Calendário Integrado: Permite o agendamento, visualização e gerenciamento de consultas de forma simples e eficiente.
 
-
-
 2. Gerenciamento de Pacientes
-
   - Cadastro Completo de Pacientes: Armazena dados pessoais, histórico médico, tratamentos e prescrições.
   - Busca e Filtros Avançados: Facilita a localização rápida de informações específicas dos pacientes.
 
