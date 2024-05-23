@@ -39,8 +39,12 @@ Eficiência Operacional: Automatiza processos administrativos e clínicos, reduz
 Melhoria no Atendimento: Facilita a comunicação e o acompanhamento contínuo dos pacientes, aumentando a satisfação e a fidelização.
 Segurança de Dados: Utiliza criptografia e medidas de segurança avançadas para proteger as informações sensíveis dos pacientes.
 Flexibilidade e Escalabilidade: Pode ser adaptado e escalado conforme as necessidades do consultório crescem ou mudam.
-Conclusão
+
+### Conclusão
 O SisGesCon-v1 é uma solução completa para a gestão de consultórios, proporcionando ferramentas indispensáveis para a administração eficiente e o atendimento de qualidade. Com sua interface amigável e funcionalidades avançadas, o SisGesCon-v1 é a escolha ideal para consultórios que buscam inovação e excelência operacional.
+
+[!IMPORTANT]
+> o SisGesCon pode ser configurado para utilizar um, dois ou quantos módulos você desejar. Acompanhando o tamanho do seu negócio.
 
 
 @thallesonofre :+1: Qualquer dúvida - direct no insta! :shipit:
