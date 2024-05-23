@@ -13,7 +13,7 @@ O SisGesCon-v1 é um sistema de gestão de consultórios desenvolvido para otimi
 
 1. Agenda e Agendamento de Consultas
 
--Calendário Integrado: Permite o agendamento, visualização e gerenciamento de consultas de forma simples e eficiente.
+- Calendário Integrado: Permite o agendamento, visualização e gerenciamento de consultas de forma simples e eficiente.
 
 
 
