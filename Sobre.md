@@ -15,10 +15,10 @@ O SisGesCon-v1 é um sistema de gestão de consultórios desenvolvido para otimi
 1. Agenda e Agendamento de Consultas
 
     - Calendário Integrado: Permite o agendamento, visualização e gerenciamento de consultas de forma simples e eficiente.
-    - Notificações e Lembretes: Envia notificações automáticas para pacientes e médicos, reduzindo o número de faltas e atrasos.
+    - Notificações e Lembretes: Envia notificações automáticas para pacientes e profissionais, reduzindo o número de faltas e atrasos.
     - Gerenciamento de Pacientes.
 
-2. Cadastro Completo de Pacientes: Armazena dados pessoais, histórico médico, tratamentos e prescrições.
+2. Cadastro Completo de Pacientes: Armazena dados pessoais, histórico profissional, tratamentos e prescrições.
     - Busca e Filtros Avançados: Facilita a localização rápida de informações específicas dos pacientes.
     - Prontuário Eletrônico.
 
@@ -44,7 +44,7 @@ Flexibilidade e Escalabilidade: Pode ser adaptado e escalado conforme as necessi
 O SisGesCon-v1 é uma solução completa para a gestão de consultórios, proporcionando ferramentas indispensáveis para a administração eficiente e o atendimento de qualidade. Com sua interface amigável e funcionalidades avançadas, o SisGesCon-v1 é a escolha ideal para consultórios que buscam inovação e excelência operacional.
 
 > [!IMPORTANT]
-> o SisGesCon pode ser configurado para utilizar um, dois ou quantos módulos você desejar. Acompanhando o tamanho do seu negócio.
+> o SisGesCon, pode ser configurado para utilizar: Um, dois ou quantos módulos do sistema você desejar. Desta forma, ele pode se adequar ao tamanho do seu negócio.
 
-
-@thallesonofre :+1: Qualquer dúvida - direct no insta! :shipit:
+> [!TIP]
+> @thallesonofre :+1: Qualquer dúvida - direct no insta! :shipit:
