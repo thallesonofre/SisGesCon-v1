@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block page_title %}
+  {% if procedimento.pk %}
+    Alterar Procedimento
+  {% else %}
+    Cadastrar Procedimento
+  {% endif %}
+{% endblock page_title %}
+
+
+{% block content %}
+  {% if procedimento.pk %}
+    <h1>Alterar Procedimento</h1>
+    <hr>
+  {% else %}
+    <h1>Cadastrar Procedimento</h1>
+    <hr>
+  {% endif %}
+        
+        <form method="POST">
+            {% csrf_token %}
+
+            {{ form|crispy }}
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+
+{% endblock content %}

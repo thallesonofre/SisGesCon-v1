@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>::: Módulo: {% block page_title %}{% endblock page_title %} :::</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary mb-4" data-bs-theme="dark" >
+        <div class="navbar-brand" href="#">
+          {% block menu %}
+          <a class="navbar-brand" href="{% url "inicio" %}"><i class="fa fa-shield" aria-hidden="true"></i></a>
+          <a class="navbar-brand" href="{% url "inicio" %}"> Home</a>
+          <a class="navbar-brand" href="{% url "agenda_list" %}">Agendar</a>
+          <a class="navbar-brand" href="{% url "paciente_list" %}">Pacientes</a>
+          <a class="navbar-brand" href="{% url "procedimento_list" %}">Procedimentos</a>
+          {% endblock menu %}
+        </div>
+    </nav>
+
+    <main class="container">
+        {% block content %}{% endblock content %}
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+    
+{% block footer %}
+<!-- Footer -->
+
+<footer class="sticky-footer bg-white">
+  <div class="container my-auto">
+      <div class="copyright text-center my-auto">
+        <span class="text-muted">&copy; 2024 Gateway, RO | Whatsapp: (+55) (69) 98409-6004 <br> <a class="link-offset-2 link-underline link-underline-opacity-0" href="www.suplantarterapias.com.br/Thalles" >Thalles Onofre</a> </span>
+      </div>
+  </div>
+</footer>
+<!-- End of Footer -->
+{% endblock footer %}
+<script src="{% static 'js/jquery.mask.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  {% block scripts %}
+  {% endblock scripts %}
+
+  </body>
+</html>

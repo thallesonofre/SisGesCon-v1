@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+    Procedimentos
+{% endblock page_title %}
+
+{% block content %}
+
+        <h1>Procedimentos Cadastrados</h1>
+        <hr>
+
+        {% if procedimento_list %}
+       
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Opções</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for procedimento in procedimento_list %}
+                    <tr>
+                        
+                        <td>{{ procedimento.nome_procedimento }}</td>
+                        <td>{{ procedimento.valor_procedimento }}</td>
+                        <td>
+                            <a href="{% url "procedimento_update" pk=procedimento.pk %}" class="btn btn-secondary btn-sm ">Alterar</a>
+                            <a href="{% url "procedimento_delete" pk=procedimento.pk %}" class="btn btn-danger btn-sm">Excluir</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                
+                </tbody>
+            </table>
+        {% else %}
+            <p>Não Existem Procedimentos Cadastrados!</p>
+        {% endif %}
+
+        <a href="{% url "procedimento_create" %}" class="btn btn-primary">Cadastrar Procedimento</a>
+
+{% endblock content %}

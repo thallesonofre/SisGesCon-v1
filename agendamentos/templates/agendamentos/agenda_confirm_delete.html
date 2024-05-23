@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block page_title %}
+    Excluir Agendamento
+{% endblock page_title %}
+
+
+{% block content %}
+    <h1>Excluir Horário da Agenda</h1>
+    <hr>
+    <p>Confirma a exclusão do Agendamento para: <strong>{{ agenda.nome_paciente }} </strong>?</p>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <button type="submit" class="btn btn-danger">Excluir</button>
+        <a href="{% url "agenda_list" %}" class="btn btn-primary">Cancelar</a>
+    </form>
+{% endblock content %}

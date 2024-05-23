@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+    Agendamentos
+{% endblock page_title %}
+
+{% block content %}
+
+        <h1>Lista de Agendamentos</h1>
+        <hr>
+                                    
+        <form action="?" method="GET">
+                                    
+            <input type="text" name="data" id="" value="{{ request.GET.data }}" class="p-1 border" autocomplete="off" placeholder="Pesquise por Data!">
+                                    
+            <button type="submit" class="btn btn-light">Buscar</button>
+                                    
+            <a href="{% url 'agenda_list' %}" class="btn btn-light">Limpar</a>
+                                    
+        </form>
+                                    
+        <hr>
+
+        {% if agenda_list %}
+       
+            <table class="table">
+                <thead>
+                <tr>
+                    
+                    <th scope="col">Data</th>
+                    <th scope="col">Hora de Início</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Consulta</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Data e Hora do Fim</th>
+                    <th scope="col">Profissional</th>
+                    <th scope="col">Opções</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for agenda in agenda_list %}
+                    <tr>
+                        
+                        <td>{{ agenda.data }}</td>
+                        <td>{{ agenda.inicio_atendimento }}</td>
+                        <td>{{ agenda.nome_paciente }}</td>
+                        <td>{{ agenda.tipo_consulta}}</td>
+                        <td>{{ agenda.valor_consulta }}</td>
+                        <td>{{ agenda.fim_atendimento|default:"-" }}</td>
+                        <td>{{ agenda.profissional }}</td>
+                        <td>
+                            <a href="{% url "agenda_complete" pk=agenda.pk %}" class="btn btn-success btn-sm {% if agenda.finished_at %}disabled{% endif %}">Finalizar</a>
+                            <a href="{% url "agenda_update" pk=agenda.pk %}" class="btn btn-secondary btn-sm {% if agenda.finished_at %}disabled{% endif %}">Alterar</a>
+                            <a href="{% url "agenda_delete" pk=agenda.pk %}" class="btn btn-danger btn-sm">Excluir</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                
+                </tbody>
+            </table>
+
+        {% else %}
+            <p>Não Existem Agendamentos Lançados!</p>
+        {% endif %}
+
+        <a href="{% url "agenda_create" %}" class="btn btn-primary">Novo Agendamento</a>
+
+        <!--Paginação das páginasde 10 em 10 ou mais-->
+        <ul class="pagination justify-content-center">
+                                        
+            {% if page_obj.has_previous %}
+    
+                {% if request.GET.data %}
+                <li class="page-item"><a class="page-link" href="?page=1&data={{request.GET.data}}">&laquo; Primeira</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}&data={{request.GET.data}}">Anterior</a></li>
+                {% else %}
+                <li class="page-item"><a class="page-link" href="?page=1">&laquo; Primeira</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Anterior</a></li>
+                {% endif %}
+    
+            {% endif %}
+        
+            <li class="page-item">
+                <span class="page-link">Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.</span>
+            </li>
+        
+            {% if page_obj.has_next %}
+                {% if request.GET.data %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}&data={{request.GET.data}}">Próxima</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}&data={{request.GET.data}}">Última &raquo;</a></li>
+                {% else %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Próxima</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Última &raquo;</a></li>
+                {% endif %}
+            {% endif %}
+
+{% endblock content %}

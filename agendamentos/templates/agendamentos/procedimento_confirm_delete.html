@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block page_title %}
+    Excluir Procedimento
+{% endblock page_title %}
+
+
+{% block content %}
+    <h1>Apagar Procedimento</h1>
+    <hr>
+    <p>Confirma a exclusão do procedimento: <strong>{{ procedimento.nome_procedimento }} </strong>?</p>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <button type="submit" class="btn btn-danger">Excluir</button>
+        <a href="{% url "procedimento_list" %}" class="btn btn-primary">Cancelar</a>
+    </form>
+{% endblock content %}

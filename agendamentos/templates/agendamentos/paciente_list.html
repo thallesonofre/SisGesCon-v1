@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+    Pacientes
+{% endblock page_title %}
+
+{% block content %}
+
+        <h1>Pacientes Cadastrados</h1>
+        <hr>
+
+        {% if paciente_list %}
+       
+            <table class="table">
+                <thead>
+                <tr>
+                    
+                    <th scope="col">Data Cadastro</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Idade</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Cadastrado por</th>
+                    <th scope="col">Opções</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for paciente in paciente_list %}
+                    <tr>
+                        
+                        <td>{{ paciente.data_cadastro }}</td>
+                        <td>{{ paciente.nome_paciente }}</td>
+                        <td>{{ paciente.idade }}</td>
+                        <td>{{ paciente.telefone }}</td>
+                        <td>{{ paciente.edereco}}</td>
+                        <td>{{ paciente.cadastrado_por}}</td>
+                        <td>
+                            <a href="{% url "paciente_update" pk=paciente.pk %}" class="btn btn-secondary btn-sm ">Alterar</a>
+                            <a href="{% url "paciente_delete" pk=paciente.pk %}" class="btn btn-danger btn-sm">Excluir</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                
+                </tbody>
+            </table>
+        {% else %}
+            <p>Não Existem Pacientes Cadastrados!</p>
+        {% endif %}
+
+        <a href="{% url "paciente_create" %}" class="btn btn-primary">Cadastrar Paciente</a>
+
+{% endblock content %}
