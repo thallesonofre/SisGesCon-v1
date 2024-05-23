@@ -1,7 +1,7 @@
 # SisGesCon-v1
-# Sistema de Gestão de Consultório
-> [!versão 1.0]
-> Useful information that users should know, even when skimming content.
+
+> [!NOTE]
+> Sistema de Gestão de Consultório versão 1.0.
 
 
 
