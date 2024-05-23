@@ -15,6 +15,8 @@ O SisGesCon-v1 é um sistema de gestão de consultórios desenvolvido para otimi
 
   - Calendário Integrado: Permite o agendamento, visualização e gerenciamento de consultas de forma simples e eficiente.
 
+
+
 2. Gerenciamento de Pacientes
 
   - Cadastro Completo de Pacientes: Armazena dados pessoais, histórico médico, tratamentos e prescrições.
