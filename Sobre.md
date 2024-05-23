@@ -3,7 +3,7 @@
 > [!NOTE]
 > Sistema de Gestão de Consultório versão 1.0.0.0
 
-[Sistema SisGesCon.](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/500px-NewTux.svg.png)
+[Sistema SisGesCon](http://thallesonofre.com.br)
 
 
 
