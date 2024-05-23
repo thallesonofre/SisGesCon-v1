@@ -43,7 +43,7 @@ Flexibilidade e Escalabilidade: Pode ser adaptado e escalado conforme as necessi
 ### Conclusão
 O SisGesCon-v1 é uma solução completa para a gestão de consultórios, proporcionando ferramentas indispensáveis para a administração eficiente e o atendimento de qualidade. Com sua interface amigável e funcionalidades avançadas, o SisGesCon-v1 é a escolha ideal para consultórios que buscam inovação e excelência operacional.
 
-[!IMPORTANT]
+> [!IMPORTANT]
 > o SisGesCon pode ser configurado para utilizar um, dois ou quantos módulos você desejar. Acompanhando o tamanho do seu negócio.
 
 
