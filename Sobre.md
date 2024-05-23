@@ -9,7 +9,7 @@
 Introdução
 O SisGesCon-v1 é um sistema de gestão de consultórios desenvolvido para otimizar e facilitar a administração de clínicas e consultórios de todos os portes. Com uma interface intuitiva e recursos robustos, o SisGesCon-v1 foi projetado para proporcionar uma experiência eficiente e integrada.
 
-''' Principais Funcionalidades
+> Principais Funcionalidades
 Agenda e Agendamento de Consultas
 
 Calendário Integrado: Permite o agendamento, visualização e gerenciamento de consultas de forma simples e eficiente.
